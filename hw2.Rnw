@@ -6,7 +6,7 @@
 \usepackage{fullpage}
 
 \begin{document}
-\title{Homework 2: STA 721 Fall24}
+\title{Homework 3: STA 721 Fall24}
 \author{Your Name}
 \date{\today; Due in one week (see Gradescope)}
 \maketitle
@@ -14,90 +14,6 @@
 
 
 \begin{enumerate}
-
-
-\item Let $\P$ be an orthogonal projection matrix onto $\M$ (a $r$-dimesional subspace of $\bbR^n$).  Use the spectral decomposition of $\P$, $\P = \U \Lambdab \U^T$ with \begin{align*}
-\U & = [u_1, \ldots, u_n] \\
-\Lambdab & = 
-\left[\begin{array}{cccc}
-\lambda_1 &          &    & \\
-          &\lambda_2 &    & \\
-          &          & \ddots & \\
-          &          &        & \lambda_n
-\end{array}
-\right]
-\end{align*}
-with colunms of $\U$ forming an orthonormal basis for $\bbR^n$ and $\lambda_1 \ge \lambda_2 \ge \dots \ge \lambda_n$ representing the eignevalues in the following.
-Prove that 
-\begin{enumerate}
-  \item the eigenvalues of $\P$, $\lambda_i$, are either zero or one 
-
-  \item the trace of $\P$ is the rank of $\P$ 
-
-  \item the dimension of the subspace that $\P$ projects onto is the rank of $\P$
-  \item  the columns of $\U_r = [u_1, u_2, \ldots u_r]$ form an ONB for the $C(\P)$
-  \item the projection $\P$ has the representation $\P = \U_r \U_r^T = \sum_{i = 1}^r u_i u_i^T$ (the sum of $r$ rank $1$ projections)
-  \item the projection $\I_n - \P = \I - \U_r \U_r^T = \U_\perp \U_\perp^T$
-where $\U_\perp = [u_{r+1}, \ldots u_n]$ is an orthogonal projection onto $\NS = \M^\perp$
-
-\end{enumerate}
-
-\item Show that $\P^- = \P$ for $\P$ a projection matrix is a generalized inverse using the definition of generalized inverse.
-
-\item
-Use the singular value decomposition of $\X \in \bbR^{n \times p}$ with rank $r < p$ to construct a generalized inverse of $\X$ based on the definition in Christensen B.36. (Suggestion: look at the Moore-Penrose generalized inverse for $\X$ in the full rank case and the Moore-Penrose inverse of $\X^T\X$ in the rank $r < p$ case)
-
-
-\item
-Consider the class of linear statistical models from class: $\Y = \X\b + \eps$ with $\eps \sim P$,
-\begin{align}
-{\cal P}_1 & = \{P = \N(\zero_n ,\I_n)\} \\
-{\cal P}_2 & = \{P = \N(\zero_n ,\sigma^2 \I_n), \sigma^2 >0\} \\
-{\cal P}_3 & = \{P = \N(\zero_n ,\Sigmab), \Sigmab \in \cal{\S}^+ \} \\
-{\cal P}_4 & = \{ \text{the set of distributions with }  \E_P[\eps] = \zero_n \text{ and } \E_P[\eps \eps^T] > 0 \} \\
-{\cal P}_5 & = \{  \text{the set of distributions with } \E_P[\eps] = \zero_n \text{ and } \E_P[\eps \eps^T] \ge 0 \}
-\end{align}
-
-Find an estimator that is unbiased for $\b \in \bbR^p$ and $P \in  \cal{P}_{1}$ but is biased for $\b \in \bbR^p$ and $P \in  \cal{P}_{2}$.
-
-
-\item Centering in Regression: Consider the linear model $\Y \sim\ N(\mu\, \sigma^2 \I_n)$ with $\mub = \one_n \beta_0 + \X \b$ and $\X$ a full rank matrix with (column) rank $p$, where $\X$ is linearly independent of the vector $\one_n$.
-
-\begin{enumerate}
-  \item Show that the mean function can be re-written as
-\begin{align*}
-\mub = & \one_n \beta_0 + \X \b \\
-     = & \one_n \alpha_0 + \X_c \boldsymbol{\beta}_c %weird error about double subscript with \b_c
-\end{align*}
-where $\X_c = (\I_n - \P_1)\X = \X - \one_n \bar{\x}^T$ (which centers each column of $\X$), $\P_1$ is the orthogonal projection onto the column of ones, and $\alpha =   \beta_0 +  \bar{\x}^T \b$
-is the intercept in the model with the centered $\X$.  (Hint: add and subtract $\P_1 \X\b$ )
-
-\item Show that $\X_c$ and $\one_n$ are orthogonal.
-
-\item  Show that $\P_1 + \P_{\X_c}$ is an orthogonal projection, where $\P_{\X_c}$ is the orthogonal projection onto $\X_c$.  Does $\P_1 + \P_{\X_c}$ project onto $C(\one_n, \X)$?
-
-\item Find the OLS/MLE estimates of $\alpha$ and $\b_c$.  What are the MLEs of $\beta_0, \b$ in the original model in terms of  $\alpha$ and $\b_c$?
-
-\item Show that diagonal elements of $\P_1 + \P_{\X_c}$ are
-$$h_{ii} = \frac{1}{n} + (\x_i-\bar{\x})^T\left((\X- \one_n \bar{\x}^T)^T(\X - \one_n \bar{\x}^T)\right)^{-1}(\x_i - \bar{\x})$$
-(recall all vectors are column vectors).  The $h_{ii}$ are known as the leverage values.
-
-
-\item Suppose unknown to you the response $\Y$ has been centered.  What will be the OLS/MLEs of $\alpha$ and $\b_c$?  Can you recover $\beta_0$?  $\b$?
-\end{enumerate}
-
-\item Gauss-Markov: Let $\E[\Y]= \X\b$ and $\Cov[\Y]=\sigma^2 \I_n$ for some known $\X \in \bbR^{n\times p}$ of rank $r$, unknown $\b \in \bbR^p$ and unknown $\sigma^2>0$.
-
-\begin{enumerate}
-   \item Let $\a \in\bbR^n$ and $\bv \in C(\X)$ be vectors such that $\E[\a^T \Y]=\E[\bv^T \Y]$ for all $\b\in\bbR^p$. How does the space in which $\d =\a - \b$ lives relate to $C(\X)$? Specifically, what can you say about $\d^T \m$ for $\m \in C(\X)?$
-   \item Derive an expression for the variance of $\a^T\Y$ in terms of the variance of $\b^T \Y$, and determine conditions under which the latter variance is smaller. (see class slides or text)
-    \item Does your result depend on whether $\X$ is full rank?
-    \item Let $\lambdab = \X^T \b$ for $\b \in \M$.  Show that $\E[\lambdab^T\bhat] = \lambdab^T\b$ for all $\b \in \bbR^p$ even if $r < p$ and $\bhat$ is not unique. 
-   \item Suppose that $\a^T \Y$ is another unbiased estimator of $\lambda^T\b$.
-Under what conditions will $\lambdab^T\bhat = \b^T\P\Y$ have the smallest variance among linear unbiased estimators?
-(repeat proof outline from class writing $\a^T\Y = \b^T\P \Y + \d^T\Y$)
-\end{enumerate}
-
 
 \end{enumerate}
 \end{document}
