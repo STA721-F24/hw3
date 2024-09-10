@@ -14,6 +14,15 @@
 
 
 \begin{enumerate}
+\item Suppose we have a linear model with $\Y = \X\b + \eps$ with $\X \in \bbR^ {n \times p$}, rank $r < p < n$ and $\E[\eps] = \zero_n$ and $\Cov[\eps] = \sigma^2 \I_n$.
+\begin{enumerate}
+\item  Is $\P_{\X^T} = (\X^T\X)(\X^T\X)^{-}$ a projection onto $C(\X^T)$?
+\item is the expression for $\P_{\X^T}$ unique?
+\item Is $\P_{\X^T}$ an orthogonal projection in general?
+\item Is $\P_{\X^T}$ using the Moore-Penrose generalized inverse an orthogonal projection?
+\item For $\X \in \bbR^{n \times p}$ rank $p < n$, find $\I_n -\P_{X^T}$.  What does this lead to conclude about whether an arbitrary $\lambdab$  leads to a unique unbiased estimator of $\lambdab^T\b$ using the resulty from class that genearlizes Proposition 2.16 in Chrsitensen? 
+\end{enumerate}
+
 
 \end{enumerate}
 \end{document}
