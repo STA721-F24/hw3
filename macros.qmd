@@ -49,6 +49,7 @@
 \newcommand{\OFP}{(\Omega,\cF, \P)}
 \newcommand{\eps}{\boldsymbol{\epsilon}}
 \newcommand{\Psib}{\boldsymbol{\Psi}}
+\newcommand{\Omegab}{\boldsymbol{\Omega}}
 \newcommand{\1}{\mathbf{1}_n}
 \newcommand{\gap}{\vspace{8mm}}
 \newcommand{\ind}{\mathrel{\mathop{\sim}\limits^{\rm ind}}}
@@ -153,12 +154,13 @@ iid}}}}
 \def\eg{\boldsymbol{\eta}_{\boldsymbol{\gamma}}}
 \def\G{\mathbf{G}}
 \def\cM{\cal M}
-\def\D{\boldsymbo{\Delta}}
+\def\D{\boldsymbol{\Delta}}
 \def\Dbf{\mathbf{D}}
 \def \shat{{\hat{\sigma}}^2}
 \def\uv{\mathbf{u}}
 \def\l {\lambda}
 \def\d{\delta}
+\def\deltab{\mathbf{\delta}}
 \def\Sigmab{\boldsymbol{\Sigma}}
 \def\Phib{\boldsymbol{\Phi}}
 \def\Lambdab{\boldsymbol{\Lambda}}

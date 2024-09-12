@@ -14,15 +14,55 @@
 
 
 \begin{enumerate}
-\item Suppose we have a linear model with $\Y = \X\b + \eps$ with $\X \in \bbR^ {n \times p$}, rank $r < p < n$ and $\E[\eps] = \zero_n$ and $\Cov[\eps] = \sigma^2 \I_n$.
+\item Suppose we have a linear model with $\Y = \X\b + \eps$ with $\X \in \bbR^ {n \times p}$, rank $r < p < n$ and $\E[\eps] = \zero_n$ and $\Cov[\eps] = \sigma^2 \I_n$.
 \begin{enumerate}
 \item  Is $\P_{\X^T} = (\X^T\X)(\X^T\X)^{-}$ a projection onto $C(\X^T)$?
-\item is the expression for $\P_{\X^T}$ unique?
+\item Is the expression for $\P_{\X^T}$ unique?
 \item Is $\P_{\X^T}$ an orthogonal projection in general?
 \item Is $\P_{\X^T}$ using the Moore-Penrose generalized inverse an orthogonal projection?
-\item For $\X \in \bbR^{n \times p}$ rank $p < n$, find $\I_n -\P_{X^T}$.  What does this lead to conclude about whether an arbitrary $\lambdab$  leads to a unique unbiased estimator of $\lambdab^T\b$ using the resulty from class that genearlizes Proposition 2.16 in Chrsitensen? 
+\item For $\X \in \bbR^{n \times p}$ rank $p < n$, find $\I_n -\P_{X^T}$.  What does this lead you to conclude about whether an arbitrary $\lambdab$  leads to a unique unbiased estimator of $\lambdab^T\b$ using the result from class that generalizes Proposition 2.1.6 in Christensen? 
 \end{enumerate}
 
+\item Show that $\P_\V \equiv \X \left(\X^T\V^{-1}\X\right)^{-1}\X^T \V^{-1}$ is idempotent (and therfore is a projection).
 
+\item Show that $\P_\V$ is an orthogonal projection under the inner product $\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$ using the definition in the slides; $\P_\V$ is an orthogonal projection if $\langle \P_\V\y,  (\I_n - \P_\V)\y \rangle_{\V^{-1}} = 0$
+
+\item  Weighted Regression: Consider the simple straight-line through the origin regression model, $Y_i=\beta x_i+\epsilon_i$ where $\beta$ and $x_i$ are scalars.
+\begin{enumerate}
+    \item Show that $\hat{\beta}_w=\sum w_iY_ix_i/\sum w_ix_i^2$ is an unbiased estimator of $\beta$ as long as $\sum w_ix_i^2\neq 0$.
+    \item Now suppose the $\epsilon_i'$s are uncorrelated but $\var[\epsilon_i]=\sigma^2\times v_i$. Compute the variance of $\hat{\beta}_w$, and using calculus or some other method, find the values of $w_1,\ldots,w_n$ that minimize this variance.\\
+\end{enumerate}
+
+\item If $\P_\V$ is an orthogonal projection under the inner product 
+$\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$, 
+show that by writing the loss function $\| \Y - \X\b\|^2_{\V^{-1}}$ as $\| (\Y - \P_\V\y) + (\P_V \Y - \X\b)\|^2_{\V^{-1}}$ and expanding appropriately that the cross-product term is zero and that $\P_\V \Y$ minimizes the  generalized loss and is the GLS estimator of $\mub$.
+
+
+
+
+
+\item Corollary from class
+\begin{enumerate}
+\item Let $\P$ be a possibly oblique projection onto $C(\X)$. 
+Find a LUE $\btilde$ of $\b$ such that $\X\btilde=\P\Y$ for each
+$\Y \in \bbR^n$, and show that it is unique.
+
+\item Suppose $\Y=\X\b + \eps$ and 
+$$\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$$ 
+Show the GLS estimator $\bhat_{\V}$ is equal to the LUE given by
+$$\bhat_{\Phib} = \left( \X^T \Phi^{-1} \X \right)^{-1} \X^T \Phib^{-1} \Y$$
+(Review the steps of the proof outlined in class of the Theorem that showed
+$\bhat_\V =\bhat$ for all $\Y$ iff $\V$ can be written 
+$\V = \X\Psib \X^T + \H\Phib \H^T$
+for some $\H$ such that $\H^T \X=0$ and for some positive definite matrices
+$\Psib$ and $\Phib$ of the appropriate dimension and Proposition 2.7.5 in Christensen.)
+
+
+\item Show that that the $\Cov[\P_\V \eps, (\I_n - \P_\V) \eps] = \zero$.  (Hint construct an appropriate decomposition of $\eps = \eps_\X + \eps_N$ that has the desired covariance sturture as in class.
+\item Show that that the $\Cov[\P_{\Phib} \eps, (\I_n - \P_{\Phib}) \eps] = \zero$.
+\item[Challenge] Show that for $\Y=\X\b + \eps$ and 
+$\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$, that $\bhat_\V = \bhat_{\Phib}$ iff the covariance of $\P_{\Phib} \eps$ and $(\I_n - \P_{\Phib}) \eps$ is  $\zero$.  
+
+\end{enumerate}
 \end{enumerate}
 \end{document}
