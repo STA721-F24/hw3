@@ -46,7 +46,6 @@
 \newcommand{\bbR}{\mathbb{R}}
 \newcommand{\bbN}{\mathbb{N}}
 \newcommand{\pperp}{\mathrel{{\rlap{$\,\perp$}\perp\,\,}}}
-\newcommand{\OFP}{(\Omega,\cF, \P)}
 \newcommand{\eps}{\boldsymbol{\epsilon}}
 \newcommand{\Psib}{\boldsymbol{\Psi}}
 \newcommand{\Omegab}{\boldsymbol{\Omega}}
