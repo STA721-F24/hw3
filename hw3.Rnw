@@ -23,9 +23,9 @@
 \item For $\X \in \bbR^{n \times p}$ rank $p < n$, find $\I_n -\P_{X^T}$.  What does this lead you to conclude about whether an arbitrary $\lambdab$  leads to a unique unbiased estimator of $\lambdab^T\b$ using the result from class that generalizes Proposition 2.1.6 in Christensen? 
 \end{enumerate}
 
-\item Show that $\P_\V \equiv \X \left(\X^T\V^{-1}\X\right)^{-1}\X^T \V^{-1}$ is idempotent (and therfore is a projection).
+\item For $\X \in \bbR^{n \times p}$ rank $p < n$ and $\V >0$, show that $\P_\V \equiv \X \left(\X^T\V^{-1}\X\right)^{-1}\X^T \V^{-1}$ is idempotent (and therfore is a projection).
 
-\item Show that $\P_\V$ is an orthogonal projection under the inner product $\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$ using the definition in the slides; $\P_\V$ is an orthogonal projection if $\langle \P_\V\y,  (\I_n - \P_\V)\y \rangle_{\V^{-1}} = 0$
+\item Show that $\P_\V$ (defined above) is an orthogonal projection under the inner product $\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$ using the definition in the slides; $\P_\V$ is an orthogonal projection if $\langle \P_\V\y,  (\I_n - \P_\V)\y \rangle_{\V^{-1}} = 0$.  Is it always an orthogonal projection using $\langle \x, \y \rangle = \x^T\y$?
 
 \item  Weighted Regression: Consider the simple straight-line through the origin regression model, $Y_i=\beta x_i+\epsilon_i$ where $\beta$ and $x_i$ are scalars.
 \begin{enumerate}
@@ -35,31 +35,31 @@
 
 \item If $\P_\V$ is an orthogonal projection under the inner product 
 $\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$, 
-show that by writing the loss function $\| \Y - \X\b\|^2_{\V^{-1}}$ as $\| (\Y - \P_\V\y) + (\P_V \Y - \X\b)\|^2_{\V^{-1}}$ and expanding appropriately that the cross-product term is zero and that $\P_\V \Y$ minimizes the  generalized loss and is the GLS estimator of $\mub$.  Aren the conditions equivalent to $\langle \P_{\Phib}\y,  (\I_n - \P_{\Phib})\y \rangle_{\V^{-1}} = 0 \quad \forall \y \in \bbR^n$$
+show that by writing the loss function $\| \Y - \X\b\|^2_{\V^{-1}}$ as $\| (\Y - \P_\V\y) + (\P_V \Y - \X\b)\|^2_{\V^{-1}}$ and expanding appropriately that the cross-product term is zero and that $\P_\V \Y$ minimizes the  generalized loss and is the GLS estimator of $\mub$. (again assume  $\X \in \bbR^{n \times p}$ is rank $p < n$ and $\V > 0$. )
 
 
 
 
 
-\item Corollary from class
+\item Corollary from class (assume that $\X$ is of rank $p < n$ as before and matrices $\V$, $\Phib$, $\Psib$ are all square,  positive definite and of the appropriate dimensions. )
 \begin{enumerate}
 \item Let $\P$ be a possibly oblique projection onto $C(\X)$. 
 Find a LUE $\btilde$ of $\b$ such that $\X\btilde=\P\Y$ for each
 $\Y \in \bbR^n$, and show that it is unique.
 
-\item Suppose $\Y=\X\b + \eps$ and 
-$$\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$$ 
+\item Suppose $\Y=\X\b + \eps$. Show that  
+
 Show the GLS estimator $\bhat_{\V}$ is equal to the LUE given by
-$$\bhat_{\Phib} = \left( \X^T \Phi^{-1} \X \right)^{-1} \X^T \Phib^{-1} \Y$$
-(Review the steps of the proof outlined in class of the Theorem that showed
+$$\bhat_{\Phib} = \left( \X^T \Phi^{-1} \X \right)^{-1} \X^T \Phib^{-1} \Y$$ iff $$\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$$. 
+(Review the steps of the proof in Proposition 2.7.5 in Christensen and the outline in class of the Theorem that showed
 $\bhat_\V =\bhat$ for all $\Y$ iff $\V$ can be written 
 $\V = \X\Psib \X^T + \H\Phib \H^T$
 for some $\H$ such that $\H^T \X=0$ and for some positive definite matrices
-$\Psib$ and $\Phib$ of the appropriate dimension and Proposition 2.7.5 in Christensen.)
+$\Psib$ and $\Phib$ of the appropriate dimension)
 
 
-\item Show that that the $\Cov[\P_\V \eps, (\I_n - \P_\V) \eps] = \zero$.  (Hint construct an appropriate decomposition of $\eps = \eps_\X + \eps_N$ that has the desired covariance sturture as in class.
-\item Show that that the $\Cov[\P_{\Phib} \eps, (\I_n - \P_{\Phib}) \eps] = \zero$.
+\item Show that that the $\E[\P_\V \eps, \eps^T (\I_n - \P_\V)^T ] = \zero$.  (Hint construct an appropriate decomposition of $\eps = \eps_\X + \eps_N$ that has the desired covariance sturture as in class.
+\item Show that that the $\E[\P_{\Phib} \eps, \eps^T(\I_n - \P_{\Phib})^T] = \zero$ iff $\V = \X\Psib \X^T + \Phib$
 \item (Challenging) Show that for $\Y=\X\b + \eps$ and 
 $\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$, that $\bhat_\V = \bhat_{\Phib}$ iff the covariance of $\P_{\Phib} \eps$ and $(\I_n - \P_{\Phib}) \eps$ is  $\zero$.  
 
