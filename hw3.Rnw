@@ -11,7 +11,7 @@
 \date{\today; Due in one week (see Gradescope)}
 \maketitle
 
-
+You are encouraged to write up solutions in LaTeX.
 
 \begin{enumerate}
 \item Suppose we have a linear model with $\Y = \X\b + \eps$ with $\X \in \bbR^ {n \times p}$, rank $r < p < n$ and $\E[\eps] = \zero_n$ and $\Cov[\eps] = \sigma^2 \I_n$.
