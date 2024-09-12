@@ -35,7 +35,7 @@
 
 \item If $\P_\V$ is an orthogonal projection under the inner product 
 $\langle \x, \y \rangle_{\V^{-1}} \equiv \x^T\V^{-1} \y$, 
-show that by writing the loss function $\| \Y - \X\b\|^2_{\V^{-1}}$ as $\| (\Y - \P_\V\y) + (\P_V \Y - \X\b)\|^2_{\V^{-1}}$ and expanding appropriately that the cross-product term is zero and that $\P_\V \Y$ minimizes the  generalized loss and is the GLS estimator of $\mub$.
+show that by writing the loss function $\| \Y - \X\b\|^2_{\V^{-1}}$ as $\| (\Y - \P_\V\y) + (\P_V \Y - \X\b)\|^2_{\V^{-1}}$ and expanding appropriately that the cross-product term is zero and that $\P_\V \Y$ minimizes the  generalized loss and is the GLS estimator of $\mub$.  Aren the conditions equivalent to $\langle \P_{\Phib}\y,  (\I_n - \P_{\Phib})\y \rangle_{\V^{-1}} = 0 \quad \forall \y \in \bbR^n$$
 
 
 
@@ -60,7 +60,7 @@ $\Psib$ and $\Phib$ of the appropriate dimension and Proposition 2.7.5 in Christ
 
 \item Show that that the $\Cov[\P_\V \eps, (\I_n - \P_\V) \eps] = \zero$.  (Hint construct an appropriate decomposition of $\eps = \eps_\X + \eps_N$ that has the desired covariance sturture as in class.
 \item Show that that the $\Cov[\P_{\Phib} \eps, (\I_n - \P_{\Phib}) \eps] = \zero$.
-\item[Challenge] Show that for $\Y=\X\b + \eps$ and 
+\item (Challenging) Show that for $\Y=\X\b + \eps$ and 
 $\Cov[\eps] = \V \equiv \X \Psib \X^T + \Phib$, that $\bhat_\V = \bhat_{\Phib}$ iff the covariance of $\P_{\Phib} \eps$ and $(\I_n - \P_{\Phib}) \eps$ is  $\zero$.  
 
 \end{enumerate}
