@@ -48,21 +48,17 @@ Find a LUE $\btilde$ of $\b$ such that $\X\btilde=\P\Y$ for each
 $\Y \in \bbR^n$, and show that it is unique.
 
 \item Suppose $\Y=\X\b + \eps$. Show that  
-
-Show the GLS estimator $\bhat_{\V}$ is equal to the LUE given by
+the GLS estimator $\bhat_{\V}$ is equal to the LUE given by
 $$\bhat_{\Phib} = \left( \X^T \Phi^{-1} \X \right)^{-1} \X^T \Phib^{-1} \Y$$ 
 iff $\Cov[\eps] = \sigma^2\V$, where 
-$$\V \equiv \X \Psib \X^T + \Phib$$. 
-(Review the steps of the proof in Proposition 2.7.5 in Christensen and the outline in class of the Theorem that showed
-$\bhat_\V =\bhat$ for all $\Y$ iff $\V$ can be written 
-$\V = \X\Psib \X^T + \H\Phib \H^T$
-for some $\H$ such that $\H^T \X=0$ and for some positive definite matrices
-$\Psib$ and $\Phib$ of the appropriate dimension)
+$$\V \equiv \X \Psib \X^T + \Phib\H \Omegab \H^T \Phib$$
+for some $\H$ such that $\H^T \X= \zero$ and for some positive definite matrices
+$\Psib$, $\Phib$ and $\Omegab$. Hint:  transform the data by $\Phib^{-1/2}$ and reduce to the result of the theorem.
 
 
-\item Show that that $\E[\P_\V \eps, \eps^T (\I_n - \P_\V)^T ] = \zero$.  (Hint construct an appropriate decomposition of $\eps = \eps_\X + \eps_N$ that has the desired covariance stucture.
-\item Show that that $\E[\P_{\Phib} \eps, \eps^T(\I_n - \P_{\Phib})^T] = \zero$ iff $\V = \X\Psib \X^T + \Phib$ (i.e.  $\bhat_\V = \bhat_{\Phib}$ iff $\P_{\Phib} \eps$ and $(\I_n - \P_{\Phib}) \eps$  are uncorrelated.  )
-\item Show that if $\Cov[\eps] = \sigma^2 \I_n$ that $\E[\P_{\I_n} \eps \eps^T(\I_n - \P_{\I_n}^T] \ne \zero$, where $\P_{\I_n} \equiv  \X (\XtX)^{-1} \X^T$.
+\item Show that that $\E[\P_\V \eps \eps^T (\I_n - \P_\V)^T ] = \zero$ always for $\Cov[\eps] = \sigma \V$
+\item Show that that $\E[\P_{\Phib} \eps, \eps^T(\I_n - \P_{\Phib})^T] = \zero$  under the conditions of the theorem.
+\item Show that if $\Cov[\eps] = \sigma^2 \I_n$ that $\E[\P_{\V} \eps \eps^T(\I_n - \P_{\V_n}^T] \ne \zero$ for general $\V$.  (show for $\V$ diagonal, then consider what happens using the spectral decomposition for a general $\V$).
 \end{enumerate}
 \end{enumerate}
 \end{document}
