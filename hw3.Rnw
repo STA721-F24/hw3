@@ -56,9 +56,9 @@ for some $\H$ such that $\H^T \X= \zero$ and for some positive definite matrices
 $\Psib$, $\Phib$ and $\Omegab$. Hint:  transform the data by $\Phib^{-1/2}$ and reduce to the result of the theorem.
 
 
-\item Show that that $\E[\P_\V \eps \eps^T (\I_n - \P_\V)^T ] = \zero$ always for $\Cov[\eps] = \sigma \V$
-\item Show that that $\E[\P_{\Phib} \eps, \eps^T(\I_n - \P_{\Phib})^T] = \zero$  under the conditions of the theorem.
-\item Show that if $\Cov[\eps] = \sigma^2 \I_n$ that $\E[\P_{\V} \eps \eps^T(\I_n - \P_{\V_n}^T] \ne \zero$ for general $\V$.  (show for $\V$ diagonal, then consider what happens using the spectral decomposition for a general $\V$).
+\item Show that that $\E[\P_\V \eps \eps^T (\I_n - \P_\V)^T ] = \zero$ always for $\Cov[\eps] = \sigma^2 \V$
+\item Show that that $\E[\P_{\Phib} \eps \eps^T(\I_n - \P_{\Phib})^T] = \zero$  under the conditions of the theorem/corollary.
+\item Show that if $\Cov[\eps] = \sigma^2 \V$ that $\E[\P_{\I_n} \eps \eps^T(\I_n - \P_{\I_n}^T] \ne \zero$ for general $\V$, for $\P_{\I_n} = \X(\XtX)^{-1}\X^T$. Suggestion: try showing for $\V$ diagonal, then consider what happens using the spectral decomposition for a general $\V$ with "whitening".
 \end{enumerate}
 \end{enumerate}
 \end{document}
